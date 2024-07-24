@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import HomeModule from './components/HomeModule';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav className="navbar">
+        <ul className="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
+          <li className="dropdown">
+            <a href="#" className="dropbtn">Projects</a>
+            <div className="dropdown-content">
+              <a href="#ai_shayari">ai_shayari</a>
+              <a href="#identifiers">identifiers</a>
+            </div>
+          </li>
+          
+        </ul>
+      </nav>
+      {document.location.hash === "#home" && <HomeModule />}
     </div>
   );
 }
