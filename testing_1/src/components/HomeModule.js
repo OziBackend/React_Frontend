@@ -5,13 +5,15 @@ function Module() {
   return (
     <div>
         {console.log('check')}
-      <div className="card">
-        <h2>Card 1</h2>
-        <p>Name 1</p>
-      </div>
-      <div className="card">
-        <h2>Card 2</h2>
-        <p>Name 2</p>
+      <div className="card-container" style={{ display: 'flex' }}>
+        <div className="card">
+          <img src="default-image.jpg" alt="Default" />
+          <p>Name 1</p>
+        </div>
+        <div className="card">
+          <img src="default-image.jpg" alt="Default" />
+          <p>Name 2</p>
+        </div>
       </div>
     </div>
   );
